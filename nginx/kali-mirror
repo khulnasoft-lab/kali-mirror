@@ -1,0 +1,16 @@
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    server_name _;
+
+    location /kali {
+        alias /var/www/html/kali/;
+    }
+
+    # Additional Nginx configuration if needed
+}
+
